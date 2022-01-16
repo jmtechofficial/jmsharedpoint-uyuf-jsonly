@@ -30,6 +30,7 @@ $(document).ready(function () {
         if ($button.hasClass('loading')) {
             return false;
         }
+        $('div.js-auth-item').removeClass('has-error');
         $button.addClass('loading');
         let $buttonDive = $(".submit_button");
         $buttonDive.removeClass('has-error');
