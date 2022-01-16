@@ -36,7 +36,7 @@ $(document).ready(function () {
         let $mainError = $buttonDive.find(".s-input-message");
         let $password = $("#password");
 
-        if ($password.val().length < 6) {
+        if ($password.val().length < 6 && validateEmail($("#email").val())) {
             let $parent = $password.parents('div.js-auth-item');
             let $error = $parent.find(".s-input-message");
             let message = $password.val().length < 1 ? "Password cannot be empty." : "The password is too short."
